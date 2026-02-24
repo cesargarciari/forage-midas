@@ -1,6 +1,7 @@
 package com.jpmc.midascore.entity;
 
 import jakarta.persistence.*;
+import org.apache.catalina.User;
 
 @Entity
 public class UserRecord {

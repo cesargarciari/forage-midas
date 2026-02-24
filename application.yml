@@ -1,3 +1,6 @@
+server:
+  port: 33400
+
 general:
   kafka-topic: trader-updates
 
@@ -15,3 +18,13 @@ spring:
     producer:
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+
+  h2:
+    console.enabled: true
+    datasource:
+      url: JDBC:h2:mem:webapp
+      driver-class-name: org.h2.Driver
+      username: sa
+      password: password
+      jpa:
+        spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
